@@ -7,8 +7,8 @@
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
         <property name="host" value="smtp.gmail.com"/>
         <property name="port" value="587"/>
-        <property name="username" value="projectpatriotdefence@gmail.com"/>
-        <property name="password" value="SmertVoroham"/>
+        <property name="username" value="ur gmail "/>
+        <property name="password" value="pass"/>
 
         <property name="javaMailProperties">
 
@@ -19,7 +19,7 @@
         </property>
     </bean>
 
-    <bean id="instructorsMail" class="notification.mail.SenderMail">
+    <bean id="notification" class="email.SenderMail">
         <property name="mailSender" ref="mailSender"/>
     </bean>
 </beans>

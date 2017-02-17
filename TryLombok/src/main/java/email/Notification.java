@@ -6,13 +6,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @author igor on 28.11.16.
  */
-public class InstructorsMail {
+public class Notification {
 
-    public void instructorMail(String to, String message) {
+    public static void main(String[] args) {
+
+        instructorMail("destination email", "Hello");
+    }
+
+    private static void instructorMail(String to, String message) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-        SenderMail instructorsMail = (SenderMail) context.getBean("instructorsMail");
+        SenderMail instructorsMail = (SenderMail) context.getBean("notification");
 
-        instructorsMail.sendMailToInstructors("projectpatriotdefence@gmail.com", to, "Project Patriot Defence", message);
+        instructorsMail.sendMailToInstructors("from email", to, "subject", message);
     }
 }

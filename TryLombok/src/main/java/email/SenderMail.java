@@ -1,4 +1,4 @@
-package notification.mail;
+package email;
 
 import lombok.Setter;
 import org.springframework.mail.MailSender;
